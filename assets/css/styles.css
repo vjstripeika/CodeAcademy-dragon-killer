@@ -62,3 +62,13 @@ h1 {
 .game-controls > p {
   text-align: center;
 }
+.combat-log {
+  padding: 0;
+  margin: 10px 0;
+}
+.combat-log li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 20px;
+}

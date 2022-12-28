@@ -22,10 +22,10 @@
             <span class="game-character-name">Knight</span>
             <span>Health: <span id="knight-health">100</span></span>
           </div>
-          <div class="game-character-image">
+          <div class="game-character-image" id="dragon-image">
             <img src="./assets/images/dragon.png" alt="dragon" />
           </div>
-          <div class="game-character-image">
+          <div class="game-character-image" id="knight-image">
             <img src="./assets/images/knight.png" alt="knight" />
           </div>
         </div>
@@ -38,9 +38,9 @@
             <p>Dragon deals 1 - 20 damage every turn.</p>
             <p>Dragon has 33% chance of taking no damage from you.</p>
           </div>
-          <div class="game-controls">
+          <div class="game-controls" id="controls">
             <button id="attack-btn">Attack</button>
-            <button id="strong-attack-btn">Defend</button>
+            <button id="defend-btn">Defend</button>
             <button id="heal-btn">Heal</button>
             <p>You deal 1 - 10 damage.</p>
             <p>You take no damage, your next attack deals double damage.</p>
@@ -50,7 +50,26 @@
       </section>
 
       <section>
-        <div class="game-log"></div>
+        <div class="game-log" id="game-log">
+          <!-- <h2>Combat Log</h2>
+          <ul class="combat-log">
+            <li>
+              <span><b>Round 1</b></span>
+              <span>Player does ...</span>
+              <span>Dragon does ...</span>
+            </li>
+            <li>
+              <span><b>Round 2</b></span>
+              <span>Player does ...</span>
+              <span>Dragon does ...</span>
+            </li>
+            <li>
+              <span><b>Round 3</b></span>
+              <span>Player does ...</span>
+              <span>Dragon does ...</span>
+            </li>
+          </ul> -->
+        </div>
       </section>
     </main>
   </body>
