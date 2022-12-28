@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon killer</title>
+    <script src="./assets/js/scripts.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section><h1>Dragon Killer 3</h1></section>
+
+      <section>
+        <div class="game-view">
+          <div class="game-character">
+            <span class="game-character-name">Dragon</span>
+            <span>Health: <span id="dragon-health">200</span></span>
+          </div>
+          <div class="game-character">
+            <span class="game-character-name">Knight</span>
+            <span>Health: <span id="knight-health">100</span></span>
+          </div>
+          <div class="game-character-image">
+            <img src="./assets/images/dragon.png" alt="dragon" />
+          </div>
+          <div class="game-character-image">
+            <img src="./assets/images/knight.png" alt="knight" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="game-view">
+          <div class="game-info">
+            <p>Dragon will attack you every turn! What are you going to do?</p>
+            <p>Dragon deals 1 - 20 damage every turn.</p>
+            <p>Dragon has 33% chance of taking no damage from you.</p>
+          </div>
+          <div class="game-controls">
+            <button id="attack-btn">Attack</button>
+            <button id="strong-attack-btn">Defend</button>
+            <button id="heal-btn">Heal</button>
+            <p>You deal 1 - 10 damage.</p>
+            <p>You take no damage, your next attack deals double damage.</p>
+            <p>You regain 1 - 30 health.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="game-log"></div>
+      </section>
+    </main>
+  </body>
+</html>
