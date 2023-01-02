@@ -1,3 +1,4 @@
+// elements.js
 const elements = {
   // Text info
   dragonHealthText: document.querySelector("#dragon-health"),
@@ -18,12 +19,15 @@ const elements = {
   knightImage: document.querySelector("#knight-image"),
 };
 
+// constants.js
 const roundType = {
   attack: "attack",
   defend: "defend",
   heal: "heal",
 };
 
+// state.js
+// importuos elements.js
 const state = {
   round: 0,
   dragonHealth: 200,
@@ -37,10 +41,12 @@ const state = {
   },
 };
 
+// utils.js
 function generateNumberTo(max) {
   return Math.ceil(Math.random() * max);
 }
 
+// attack.js
 function playerAttack() {
   const damage = generateNumberTo(10);
   state.dragonHealth -= damage;
@@ -53,6 +59,7 @@ function playerAttack() {
   return damage;
 }
 
+// heal.js
 function playerHeal() {
   const healing = generateNumberTo(30);
   const sum = state.knightHealth + healing;
@@ -68,6 +75,7 @@ function playerHeal() {
   return healing;
 }
 
+// dragon.js
 function dragonAttack() {
   const damage = generateNumberTo(20);
   state.knightHealth -= damage;
@@ -76,6 +84,7 @@ function dragonAttack() {
   return damage;
 }
 
+// writeLog.js
 function writeLogToHTML(roundLog) {
   if (!elements.combatLog) {
     setupCombatLog();
@@ -97,6 +106,7 @@ function writeLogToHTML(roundLog) {
   elements.combatLog.append(liElement);
 }
 
+// writeLog.js
 function setupCombatLog() {
   const heading = document.createElement("h2");
   heading.textContent = "Combat Log";
@@ -107,6 +117,7 @@ function setupCombatLog() {
   elements.gameLogContainer.append(elements.combatLog);
 }
 
+// endgame.js
 function checkIfEndOfGame() {
   if (state.knightHealth <= 0) {
     // pašalinti riterio paveikslėlį
@@ -123,6 +134,7 @@ function checkIfEndOfGame() {
   }
 }
 
+// playRound.js
 function playRound(type) {
   state.increaseRound();
 
@@ -156,6 +168,7 @@ function playRound(type) {
   checkIfEndOfGame();
 }
 
+// palikti scripts.js
 elements.attackButton.addEventListener("click", function () {
   playRound(roundType.attack);
 });
